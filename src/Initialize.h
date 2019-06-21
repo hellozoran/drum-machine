@@ -17,5 +17,12 @@ void initController() {
     digitalWrite(encoder[e], HIGH);
   }
 
+  tft.initR(INITR_BLACKTAB);
+  tft.setRotation(3);
+  uint16_t time = millis();
+  tft.fillScreen(ST7735_BLACK);
+
+  tft.fillScreen(ST7735_BLACK);
+  WriteText("Version 0.4.1", ST7735_WHITE);
   Serial.println("Awesomeness closer and closer.");
 }

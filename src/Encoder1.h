@@ -1,3 +1,13 @@
+const int encRight = 1;
+const int encLeft = 2;
+const int encNoChange = 3;
+int encValueA = 0;
+int encValueB = 0;
+int encDirection = encNoChange;
+const int encMinValue = 1;
+const int encMaxValue = 100;
+const int encStep = 1;
+
 void browseKit() {
   if(encDirection == encRight) {
     drumKit += encStep;
@@ -15,7 +25,6 @@ void browseKit() {
     Serial.println(drumKit);
   }
 }
-
 
 void browseLoop() {
  if(encDirection == encRight) {

@@ -1,10 +1,20 @@
+void playbackLoop() {
+  Serial.println("Playing");
+}
+
+void recordLoop() {
+  Serial.println("Recording in progress");
+}
+
 void playMode() {
   if(playState && recState) {
-    Serial.println("Playback + Recording");
-  } else if (playState) {
-    Serial.println("Playback");
-  } else if (recState) {
-    Serial.println("Recording standby");
+    recordLoop();
+  }
+  else if (playState) {
+    playbackLoop();
+  }
+  else if (recState) {
+    Serial.println("Rec standby");
   }
 }
 
